@@ -1,0 +1,91 @@
+/* Контейнер сайдбара.
+   Ширина и фон — здесь; расположение в сетке/flex главного лейаута — на .main-layout */
+.sideBar {
+    width: 240px;
+    flex: 0 0 240px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 16px;
+    background: #FFFFFF;
+    border-right: 1px solid #EAEAF0;
+}
+
+/* Логотип */
+.sideBar h1 {
+    margin: 0;
+    padding: 0 16px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #1F1F2B;
+    letter-spacing: 0.5px;
+}
+
+.latter {
+    color: #E50079;
+}
+
+/* Навигация */
+.sideBar .top {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Блок профиля и выхода — прижат к низу сайдбара */
+.sideBar .bottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #EAEAF0;
+}
+
+.sideBar .bottom__profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 4px;
+}
+
+.sideBar .bottom__profile img {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #F0F0F5;
+}
+
+.sideBar .profile {
+    min-width: 0;
+}
+
+.profile__name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1F1F2B;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.profile__rule {
+    margin: 0;
+    font-size: 12px;
+    color: #8A8A9A;
+    text-transform: capitalize;
+}
+
+.sideBar .bottom__exit {
+    display: flex;
+}
+
+/* Пустой src у <img> рисует битую иконку — прячем, пока нет иконок/аватаров */
+.sideBar img[src=""] {
+    display: none;
+}

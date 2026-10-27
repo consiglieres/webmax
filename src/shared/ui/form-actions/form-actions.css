@@ -1,0 +1,59 @@
+/* Нижняя панель действий формы */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    padding: 18px 24px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAF0;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(31, 31, 43, 0.04);
+}
+
+.form-actions__note {
+    margin: 0;
+    font-size: 12px;
+    color: #8A8A9A;
+}
+
+.form-actions__note span {
+    color: #C2185B;
+}
+
+.form-actions__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+@media (max-width: 700px) {
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px;
+    }
+
+    .form-actions__buttons {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form-actions__buttons .ui-button {
+        flex: 1;
+    }
+}
+
+@media (max-width: 420px) {
+    .form-actions__buttons {
+        flex-direction: column;
+    }
+
+    .form-actions__buttons .ui-button {
+        width: 100%;
+    }
+}

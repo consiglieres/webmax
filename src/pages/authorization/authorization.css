@@ -1,0 +1,180 @@
+/* Страница авторизации */
+
+.authorization {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    min-height: 100vh;
+    padding: 48px 24px;
+    overflow: hidden;
+    background:
+        radial-gradient(900px 600px at 12% 8%, rgba(229, 0, 121, 0.12), transparent 60%),
+        radial-gradient(800px 700px at 88% 92%, rgba(194, 24, 91, 0.10), transparent 60%),
+        #F8F8F8;
+}
+
+/* Декоративные пятна на фоне */
+.authorization::before,
+.authorization::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.authorization::before {
+    top: -160px;
+    right: -120px;
+    width: 420px;
+    height: 420px;
+    background: linear-gradient(135deg, rgba(229, 0, 121, 0.16), rgba(194, 24, 91, 0));
+}
+
+.authorization::after {
+    bottom: -140px;
+    left: -100px;
+    width: 320px;
+    height: 320px;
+    background: linear-gradient(135deg, rgba(194, 24, 91, 0.12), rgba(229, 0, 121, 0));
+}
+
+/* Логотип университета над карточкой */
+.authorization > img {
+    position: relative;
+    z-index: 1;
+    width: auto;
+    max-width: 180px;
+    height: 56px;
+    object-fit: contain;
+}
+
+/* Пустой src у <img> рисует битую иконку — прячем, пока нет логотипа */
+.authorization > img[src=""] {
+    display: none;
+}
+
+/* Карточка входа */
+.authorization .card {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAF0;
+    border-radius: 20px;
+    box-shadow:
+        0 24px 60px rgba(31, 31, 43, 0.10),
+        0 4px 16px rgba(31, 31, 43, 0.04);
+}
+
+/* Акцентная полоска в верхней части карточки */
+.authorization .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 56px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, #E50079, #C2185B);
+    transform: translateX(-50%);
+}
+
+/* Логотип WebmoX */
+.card__logo {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #1F1F2B;
+}
+
+.card__logo .latter {
+    color: #E50079;
+}
+
+/* Форма */
+.authorization .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form__input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid #E0E0E8;
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: #1F1F2B;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form__input::placeholder {
+    color: #9A9AA8;
+}
+
+.form__input:hover {
+    border-color: #C9C9D4;
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: #C2185B;
+    box-shadow: 0 0 0 3px rgba(194, 24, 91, 0.12);
+}
+
+/* Ошибка формы */
+.form__error {
+    margin: -4px 0 0;
+    color: #C2185B;
+    font-size: 14px;
+}
+
+/* Кнопка «Войти» */
+.authorization__submit {
+    margin-top: 8px;
+}
+
+/* Узкие экраны */
+@media (max-width: 480px) {
+    .authorization {
+        gap: 24px;
+        padding: 24px 16px;
+    }
+
+    .authorization .card {
+        padding: 28px 20px;
+        border-radius: 16px;
+    }
+
+    .authorization > img {
+        max-width: 140px;
+        height: 44px;
+    }
+
+    .card__logo {
+        font-size: 26px;
+    }
+}
+
+/* Меньше анимаций для пользователей с соответствующей настройкой */
+@media (prefers-reduced-motion: reduce) {
+    .form__input {
+        transition: none;
+    }
+}

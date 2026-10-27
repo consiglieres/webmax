@@ -1,0 +1,87 @@
+/* Колонки таблицы студентов: ФИО, курс, логин Proxmox, пароль, стенды */
+.students .list-header,
+.students__row {
+    grid-template-columns: minmax(220px, 2.2fr) 90px minmax(140px, 1.2fr) minmax(140px, 1.2fr) minmax(220px, 2fr);
+}
+
+.students__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.students__row {
+    display: grid;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAF0;
+    border-radius: 10px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.students__row:hover {
+    border-color: #D9D9E3;
+    box-shadow: 0 4px 14px rgba(31, 31, 43, 0.06);
+}
+
+.students__row p {
+    margin: 0;
+    min-width: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #1F1F2B;
+}
+
+.students__name {
+    font-weight: 600;
+}
+
+.students__mono {
+    overflow: hidden;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.students__stands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-width: 0;
+}
+
+.students__stand {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: #F4F4F8;
+    color: #5A5A6A;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.students__empty {
+    margin: 0;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAF0;
+    border-radius: 10px;
+    color: #8A8A9A;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .students {
+        overflow-x: auto;
+    }
+
+    .students .list-header,
+    .students__row {
+        min-width: 820px;
+    }
+}

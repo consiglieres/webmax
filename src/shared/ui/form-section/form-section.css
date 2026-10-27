@@ -1,0 +1,99 @@
+/* Секция формы с заголовком и сеткой полей */
+
+.form-card {
+    box-sizing: border-box;
+    padding: 24px 28px 28px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAF0;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(31, 31, 43, 0.04);
+}
+
+.form-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #F0F0F5;
+}
+
+.form-card__info {
+    min-width: 0;
+}
+
+.form-card__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1F1F2B;
+}
+
+.form-card__title::before {
+    content: "";
+    flex: 0 0 4px;
+    width: 4px;
+    height: 18px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, #E50079, #C2185B);
+}
+
+.form-card__description {
+    margin: 6px 0 0 14px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #8A8A9A;
+}
+
+.form-card__step {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FCE8F0;
+    color: #C2185B;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-grid--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+    .form-grid--three {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .form-card__header {
+        margin-bottom: 18px;
+        padding-bottom: 16px;
+    }
+
+    .form-card__description {
+        margin-left: 0;
+    }
+}

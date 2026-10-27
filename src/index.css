@@ -1,0 +1,9 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+a, h1, h2, h3, h4, h5, h6, button, input, span, p, div {
+    font-family: Arial, sans-serif;
+}

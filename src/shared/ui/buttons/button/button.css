@@ -1,0 +1,126 @@
+/* Универсальная кнопка */
+
+.ui-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.ui-button--sm {
+    min-height: 36px;
+    padding: 0 14px;
+    font-size: 13px;
+}
+
+.ui-button--md {
+    min-height: 44px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.ui-button--lg {
+    min-height: 48px;
+    padding: 0 24px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.ui-button--full {
+    width: 100%;
+}
+
+.ui-button:focus-visible {
+    outline: 2px solid #C2185B;
+    outline-offset: 2px;
+}
+
+.ui-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    filter: none;
+}
+
+/* Основная кнопка */
+.ui-button--primary {
+    border-color: transparent;
+    background: linear-gradient(135deg, #E50079 0%, #C2185B 100%);
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(194, 24, 91, 0.22);
+}
+
+.ui-button--primary:hover:not(:disabled) {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 26px rgba(194, 24, 91, 0.3);
+}
+
+.ui-button--primary:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(194, 24, 91, 0.2);
+}
+
+/* Второстепенная кнопка */
+.ui-button--secondary {
+    border-color: #E0E0E8;
+    background: #FFFFFF;
+    color: #3F3F4C;
+}
+
+.ui-button--secondary:hover:not(:disabled) {
+    border-color: #C9C9D4;
+    background: #F7F7FA;
+}
+
+.ui-button--secondary:active:not(:disabled) {
+    background: #F0F0F5;
+}
+
+/* Опасное действие */
+.ui-button--danger {
+    border-color: #F0D5D5;
+    background: transparent;
+    color: #D32F2F;
+}
+
+.ui-button--danger:hover:not(:disabled) {
+    border-color: #D32F2F;
+    background: rgba(211, 47, 47, 0.08);
+}
+
+.ui-button--danger:active:not(:disabled) {
+    background: rgba(211, 47, 47, 0.14);
+}
+
+.ui-button--danger:focus-visible {
+    outline-color: #D32F2F;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ui-button {
+        transition: none;
+    }
+
+    .ui-button:hover {
+        transform: none;
+    }
+}

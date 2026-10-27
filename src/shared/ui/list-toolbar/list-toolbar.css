@@ -1,0 +1,59 @@
+/* Панель поиска и фильтров списка */
+
+.list-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(180px, 1fr);
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 0;
+}
+
+.list-toolbar--search-only {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.list-toolbar__search,
+.list-toolbar__select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #E0E0E8;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #1F1F2B;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.list-toolbar__search::placeholder {
+    color: #9A9AA8;
+}
+
+.list-toolbar__search:hover,
+.list-toolbar__select:hover {
+    border-color: #C9C9D4;
+}
+
+.list-toolbar__search:focus,
+.list-toolbar__select:focus {
+    outline: none;
+    border-color: #C2185B;
+    box-shadow: 0 0 0 3px rgba(194, 24, 91, 0.12);
+}
+
+.list-toolbar__select {
+    padding-right: 32px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%238A8A9A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    appearance: none;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .list-toolbar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

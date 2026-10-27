@@ -1,0 +1,42 @@
+/* Поле загрузки файла */
+
+.input-file {
+    box-sizing: border-box;
+    padding: 8px 12px;
+    border: 1px dashed #C9C9D4;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #5A5A6A;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.input-file:hover {
+    border-color: #C2185B;
+    background: rgba(194, 24, 91, 0.04);
+}
+
+.input-file:focus-visible {
+    outline: 2px solid #C2185B;
+    outline-offset: 2px;
+}
+
+.input-file::file-selector-button {
+    margin-right: 10px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #C2185B;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.input-file::file-selector-button:hover {
+    background: #A01450;
+}
