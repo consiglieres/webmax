@@ -68,8 +68,8 @@ function ListStudents(): ReactElement {
 
             <section className="students__list">
                 {filteredStudents.map((student) => (
-                    <article className="students__row" key={student.id}>
-                        <p className="students__name">{getFullName(student)}</p>
+<article className="students__row" key={student.id} onClick={() => navigate(`/listStudents/${student.id}`)}>
+    <p className="students__name">{getFullName(student)}</p>
                         <p>{student.course} курс</p>
                         <p className="students__mono">{student.proxmoxLogin}</p>
                         <p className="students__mono">{student.password}</p>

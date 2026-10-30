@@ -13,7 +13,7 @@ function SideBar({name, rule, onLogout}: SideBarProps): ReactElement {
         <section className="sideBar">
             <h1>Webmo<b className="latter">X</b></h1>
             <section className="top">
-                <LinkSideBar linkURL="" imageButton="" buttonName="Главная"/>
+                <LinkSideBar linkURL="/" imageButton="" buttonName="Главная"/>
                 <LinkSideBar linkURL="listStudents" imageButton="" buttonName="Студенты"/>
                 <LinkSideBar linkURL="listSamples" imageButton="" buttonName="Конфигурации"/>
             </section>

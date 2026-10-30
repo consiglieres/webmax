@@ -45,8 +45,8 @@ function ListSamples(): ReactElement {
 
             <section className="samples__list">
                 {filteredConfigurations.map((configuration) => (
-                    <article className="samples__row" key={configuration.id}>
-                        <p className="samples__name">{configuration.name}</p>
+<article className="samples__row" key={configuration.id} onClick={() => navigate(`/listSamples/${configuration.id}`)}>
+    <p className="samples__name">{configuration.name}</p>
                         <p className="samples__description">{configuration.description}</p>
                         <p>{configuration.standsCount}</p>
                         <p>{formatDate(configuration.createdAt)}</p>

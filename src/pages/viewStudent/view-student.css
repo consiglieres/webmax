@@ -1,0 +1,82 @@
+.view-student {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.view-student__card {
+    background: #ffffff;
+    border: 1px solid #eaeaf0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 14px rgba(31, 31, 43, 0.04);
+}
+
+.view-student__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 0;
+}
+
+.view-student__row {
+    display: grid;
+    grid-template-columns: minmax(120px, 160px) 1fr;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    align-items: start;
+}
+
+.view-student__row:last-child {
+    border-bottom: none;
+}
+
+.view-student__row dt {
+    font-weight: 600;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.view-student__row dd {
+    margin: 0;
+    color: #1f1f2b;
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.view-student__mono {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 13px;
+}
+
+.view-student__stands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.view-student__stand {
+    background: #f4f4f8;
+    border-radius: 999px;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+    .view-student__card {
+        padding: 1rem;
+    }
+
+    .view-student__row {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+}

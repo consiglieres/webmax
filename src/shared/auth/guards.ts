@@ -2,7 +2,7 @@ import {replace, type LoaderFunctionArgs} from "react-router";
 import type {IUser} from "../../entities/interfaces/user.interface.ts";
 import {getSessionUser} from "./session.ts";
 
-export const LOGIN_PATH = "/";
+export const LOGIN_PATH = "/login";
 export const DEFAULT_AUTHENTICATED_PATH = "/listStudents";
 
 export interface AuthRouteData {
